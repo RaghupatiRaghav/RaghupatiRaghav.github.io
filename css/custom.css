@@ -1,6 +1,5 @@
 /* defines variables that can be used throughout css style sheet */
 :root {
-  --link-color: #028090;
   --text-color: #000000;
   --muted-text-color: #5e5e67;
   --heading-color: #333;
@@ -26,19 +25,31 @@ img {
 /* params for governing the entire html */
 html {
 font-family: var(--body-font);
-  font-size: 0.91rem;
+  font-size: 1.1rem;
   line-height: 1.45;
   background-color: var(--background-color);
 }
 
+/* params for header */
+header {
+  text-align: center;
+  border-block-end: 1px solid var(--heading-color);
+  margin-block-end: 1rem;
+  margin-inline: auto;
+  padding-block: 2rem 2rem;
+  max-width: 65ch;
+  color: var(--muted-text-color);
+}
+
 /* params for heading 1 */
 h1 {
-  border-block-start: 1px solid var(--heading-color);
+  /* border-block-start: 1px solid var(--heading-color); */
   font-style: italic;
-  margin-block-start: 4rem;
-  margin-block-end: 2rem;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
   font-family: var(--heading-font);
   font-weight: normal;
+  /* padding-block: 0rem 0rem; */
 }
 
 /* params for heading 2 */
@@ -67,10 +78,43 @@ a:hover {
   text-decoration: None;
 }
 
+
+/* pre tag for ASCII art and computer code. Border radius is param for rounding the corners. If texts overflows, the browser will automatically present the user with a scrollbar. Hence the param and its value */
+pre {
+  padding: 1rem;
+  background-color: #edebe7;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.75rem;
+}
+
+/* figure parameters */
+figure {
+  margin-inline: 0;
+}
+
+figure img {
+  display: block;
+  margin-inline: auto;
+  border-radius: 4px;
+}
+
+figcaption {
+  margin-block-start: 0.5rem;
+  font-size: 0.8rem;
+}
+
 /* params for footer page */
 footer {
+  border-block-start: 1px solid var(--heading-color);
+  font-style: normal;
+  text-align: center;
+  margin-block-start: 2rem;
+  margin-block-end: 1rem;
   margin-inline: auto;
+  /* padding-block: 1.5rem 3rem; */
   max-width: 65ch;
+  color: var(--muted-text-color);
 }
 
 /* these are declarations for defining charter font (as recommended by Matthew Butterick in his Practical Typography) */
